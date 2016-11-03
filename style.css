@@ -1,3 +1,141 @@
-body {
-  background: black;
+/* CUSTOM SIMPSONS FONT from here: http://www.dafont.com/font-comment.php?file=simpsonfont&text=%2A+Simpsons*/
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('Simpsonfont.ttf')  format('truetype');
 }
+
+/* CLEARFIX HACK from here: https://css-tricks.com/snippets/css/using-font-face/*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  /* cursor: url('glenn.png'), default; */
+}
+body {
+  /* cursor: url('glenn.png'), default; */
+  background: #4d5357;
+  font-family: 'Simpsonfont', sans-serif;
+}
+
+
+#game-title {
+  font-size: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  margin-left: -300px;
+  padding: 50px 0 25px;
+  text-align: center;
+  width: 600px;
+}
+
+#objective {
+  text-align: center;
+  letter-spacing: 1px;
+  width: 602px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  margin-left: -301px;
+}
+
+#play-btn {
+  font-family: 'Simpsonfont', sans-serif;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+#game-area {
+  display: none;
+  background: url('img/simpsons-background.jpg') no-repeat center center;
+  background-size: cover;
+  width: 850px;
+  height: 500px;
+  border: 1px solid black;
+  position: absolute;
+  top: 165px;
+  left: 40px;
+
+}
+
+#leaderboard {
+  display: none;
+  width: 250px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 165px;
+  right: 40px;
+}
+
+#leaderboard h3 {
+  background: #fff;
+  font-size: 30px;
+  border-bottom: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+  text-decoration: underline;
+}
+
+#leaderboard ol {
+  list-style: decimal inside;
+  line-height: 2;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+#inputData {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+#inputSubmit {
+  font-family: 'Simpsonfont', sans-serif;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-left: -75px;
+  border-radius: 10px;
+
+}
+
+/* #good-guy {
+  background-image: url(glenn.png);
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  display: block;
+} */
+
+/* * {
+  cursor: none;
+}
+
+figure#mouse-pointer {
+  background-image: url('../img/pointer.png');
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  margin-left: -8px;
+  display: block;
+} */
