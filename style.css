@@ -59,6 +59,7 @@ body {
 }
 
 #timer {
+  background: #fff;
   width: 250px;
   height: 100px;
   border: 1px solid black;
@@ -67,15 +68,38 @@ body {
   right: 40px;
   border-radius: 10px;
 }
+#counter {
+  font-size: 65px;
+  text-align: center;
+  padding: 25px;
+}
+
+/* .dog {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  z-index: 1;
+  top: 200px;
+  left: 500px;
+} */
+.bart {
+  position: absolute;
+  width: 35px;
+  height: 53px;
+  display: inline-block;
+  z-index: 1;
+  top: 200px;
+  left: 500px;
+}
 
 #game-area {
   /* background: url('img/simpsons-background.jpg') no-repeat center center; */
-  cursor: url('bart-cursor.png'), auto;
   background: black;
   background-size: cover;
   padding: 20px;
   width: 830px;
-  height: 480px;
+  height: 460px;
   border: 1px solid black;
   position: absolute;
   top: 165px;
@@ -84,7 +108,6 @@ body {
 }
 
 #leaderboard {
-  display: none;
   width: 250px;
   height: 500px;
   border: 1px solid black;
@@ -229,24 +252,3 @@ body {
   background-position: -242px -171px;
 }
 
-
-/* #good-guy {
-  background-image: url(glenn.png);
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  display: block;
-} */
-
-/* * {
-  cursor: none;
-}
-
-figure#mouse-pointer {
-  background-image: url('../img/pointer.png');
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  margin-left: -8px;
-  display: block;
-} */
