@@ -173,9 +173,10 @@ body {
   width: 47px;
   height: 56px;
   background-position: -182px -269px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
+  /* transition: top 2s, left 2s;
+  transition-timing-function: linear; */
 }
+
 .skinner-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
