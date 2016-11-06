@@ -1,0 +1,274 @@
+/* CUSTOM SIMPSONS FONT from here: http://www.dafont.com/font-comment.php?file=simpsonfont&text=%2A+Simpsons*/
+@font-face {
+  font-family: 'Simpsonfont';
+  src: url('../font/Simpsonfont.ttf')  format('truetype');
+}
+
+/* CLEARFIX HACK from here: https://css-tricks.com/snippets/css/using-font-face/*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  /* cursor: url('glenn.png'), default; */
+}
+body {
+  /* cursor: url('glenn.png'), default; */
+  background: #16b2d9;;
+  font-family: 'Simpsonfont', sans-serif;
+}
+
+
+#game-title {
+  font-size: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: #ffd90f;
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  margin-left: -300px;
+  padding: 50px 0 25px;
+  text-align: center;
+  width: 600px;
+}
+
+#objective {
+  text-align: center;
+  letter-spacing: 1px;
+  width: 602px;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  margin-left: -301px;
+}
+
+#play-btn {
+  font-family: 'Simpsonfont', sans-serif;
+  background: #ffd90f;
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+#replay-btn {
+  font-family: 'Simpsonfont', sans-serif;
+  background: #ffd90f;
+  border: 1px solid black;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+#motivation {
+  background: url('../img/reset.gif') no-repeat center center, white;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 492.75px;
+  height: 264px;
+  margin-top: -132px;
+  z-index: -1;
+}
+
+#timer {
+  background: #ffd90f;
+  border: 1px solid black;
+  width: 250px;
+  height: 100px;
+  position: absolute;
+  top: 4%;
+  right: 40px;
+  border-radius: 10px;
+}
+#counter {
+  font-size: 65px;
+  text-align: center;
+  padding: 25px;
+}
+
+.bart {
+  position: absolute;
+  width: 35px;
+  height: 53px;
+  display: inline-block;
+  z-index: 1;
+  top: 200px;
+  left: 500px;
+}
+
+#game-area {
+  /* background: url('img/simpsons-background.jpg') no-repeat center center; */
+  background: black;
+  background-size: cover;
+  padding: 20px;
+  width: 830px;
+  height: 460px;
+  border: 1px solid black;
+  position: absolute;
+  top: 165px;
+  left: 40px;
+}
+
+#leaderboard {
+  background: #f43d15;
+  border: 1px solid #000;
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 165px;
+  right: 40px;
+}
+
+#leaderboard h3 {
+  background: #fffffa;
+  font-size: 30px;
+  border-bottom: 5px solid #16b2d9;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+  text-decoration: underline;
+}
+
+#leaderboard ol {
+  list-style: decimal inside;
+  line-height: 2;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#inputData {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+#inputSubmit {
+  font-family: 'Simpsonfont', sans-serif;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-left: -75px;
+  border-radius: 10px;
+
+}
+
+/***** SPRITES *****/
+
+/* .duck {
+  position: absolute;
+  background-image: url(images/duckhunt.png);
+  background-position: -100px -160px;
+  width: 110px;
+  height: 115px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+} */
+
+
+.skinner {
+  position: absolute;
+  background-image: url(../img/Sprite_Sheet.png);
+  width: 47px;
+  height: 56px;
+  background-position: -182px -269px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+
+/* .skinner-left {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 47px;
+  height: 56px;
+  background-position: -230px -269px;
+} */
+
+.nelson {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 31px;
+  height: 56px;
+  background-position: -114px -267px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+/* .nelson-left {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 31px;
+  height: 56px;
+  background-position: -147px -267px;
+} */
+
+.martin {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 40px;
+  height: 42px;
+  background-position: -282px -279px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+/* .martin-left {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 40px;
+  height: 42px;
+  background-position: -288px -207px;
+} */
+
+.binky {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 55px;
+  height: 63px;
+  background-position: 0px -258px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+/* .binky-left {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 55px;
+  height: 63px;
+  background-position: -58px -258px;
+} */
+
+.sideshow-bob {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 40px;
+  height: 78px;
+  background-position: -197px -171px;
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+}
+/* .sideshow-bob-left {
+  position: absolute;
+  background-image: url(img/Sprite_Sheet.png);
+  width: 40px;
+  height: 78px;
+  background-position: -242px -171px;
+} */
+

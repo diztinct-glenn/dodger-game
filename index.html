@@ -5,46 +5,52 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Glenn Basgaard</title>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="scripts/jquery.js"></script>
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </head>
 <body>
-
 
   <div id='game-title'>
     <h1>* Simpsons</h1>
   </div>
+
   <div id='objective'>
     <p>Objective: Bart is about to be bombarded by some pesky nuisances. See how long you can last without letting any of them come into contact with him. Good luck!</p>
   </div>
-  <button id='play-btn' type=''>Play!</button>
-  <input id ='inputData' type='text' name=''>
-  <button id ='inputSubmit' type='submit'>Submit</button>
+
+  <button id='play-btn' type=''>Play !</button>
+  <button id='replay-btn' type=''>Play Again?</button>
+  <div id='try-again'>
+    <img id='motivation' src="img/reset.gif" alt="">
+  </div>
+
+  <!-- <input id ='inputData' type='text' name=''>
+  <button id ='inputSubmit' type='submit'>Submit</button> -->
+
   <div id='timer'>
     <p id='counter'></p>
   </div>
-  <div id='game-area'>
-    <div class='bart'>
-  <img src="bart-cursor.png">
-</div>
-  </div>
+
+  <div class='bart'><img src="img/bart-cursor.png"></div>
+
+  <div id='game-area'></div>
+
   <div id='leaderboard'>
     <h3>Leaderboard</h3>
-      <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ol id='tops'>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
+        <li class='top-ten'>-<span class='id'></span></li>
       </ol>
   </div>
-
 
 </body>
 </html>

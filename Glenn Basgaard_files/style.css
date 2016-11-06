@@ -74,15 +74,6 @@ body {
   padding: 25px;
 }
 
-/* .dog {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  z-index: 1;
-  top: 200px;
-  left: 500px;
-} */
 .bart {
   position: absolute;
   width: 35px;
@@ -104,7 +95,6 @@ body {
   position: absolute;
   top: 165px;
   left: 40px;
-
 }
 
 #leaderboard {
@@ -173,17 +163,17 @@ body {
   width: 47px;
   height: 56px;
   background-position: -182px -269px;
-  /* transition: top 2s, left 2s;
-  transition-timing-function: linear; */
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
 }
 
-.skinner-left {
+/* .skinner-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
   width: 47px;
   height: 56px;
   background-position: -230px -269px;
-}
+} */
 
 .nelson {
   position: absolute;
@@ -194,13 +184,13 @@ body {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.nelson-left {
+/* .nelson-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
   width: 31px;
   height: 56px;
   background-position: -147px -267px;
-}
+} */
 
 .martin {
   position: absolute;
@@ -211,13 +201,13 @@ body {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.martin-left {
+/* .martin-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
   width: 40px;
   height: 42px;
   background-position: -288px -207px;
-}
+} */
 
 .binky {
   position: absolute;
@@ -228,13 +218,13 @@ body {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.binky-left {
+/* .binky-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
   width: 55px;
   height: 63px;
   background-position: -58px -258px;
-}
+} */
 
 .sideshow-bob {
   position: absolute;
@@ -245,11 +235,11 @@ body {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.sideshow-bob-left {
+/* .sideshow-bob-left {
   position: absolute;
   background-image: url(img/Sprite_Sheet.png);
   width: 40px;
   height: 78px;
   background-position: -242px -171px;
-}
+} */
 

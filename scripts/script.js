@@ -1,9 +1,5 @@
 "use strict";
 
-var holder = {};
-
-var log = console.log;
-
 var isBetween = function(a, b, c){
   return a <= b && b <= c;
 }
@@ -31,14 +27,37 @@ var boxCollide = function(box1, box2){
     || corners(box2).some(function(corner){return pointIsIn(corner, box1);}));
 };
 
+
+// TIMER
+  var startTimer = 0;
+  var timer = setInterval(function() {
+      startTimer += 1;
+      $('#counter').html(startTimer);
+    }, 1000);
+  var stopTimer = function() {
+    clearInterval(timer);
+  };
+// New Game
+  var newGame = function() {
+    window.location.reload();
+  };
+
 (function() {
 
-// Theme music for gameplay duration
-  // var simpsonsTheme = new Audio('audio/start-round.mp3');
+$(document).ready(function() {
+  // Theme music for gameplay duration
+  // var simpsonsTheme = new Audio('audio/Simpsons_Theme.mp3');
   // simpsonsTheme.play();
 
-$(document).ready(function() {
 
+// TRYING LOCAL STORAGE
+//   var updateScore = $('.tops').html();
+//    localStorage.setItem('updateScore', updateScore);
+//    // return false;
+
+//    if(localStorage.getItem('updateScore')) {
+// $('.tops').html(localStorage.getItem('updateScore'));
+// }
 
 // Page loaded with landing page of just the Title and Play Button
   var $toggleView = function() {
@@ -47,6 +66,9 @@ $(document).ready(function() {
     $('#inputData').hide();
     $('#inputSubmit').hide();
     $('#timer').hide();
+    $('.bart').hide();
+    $('#try-again').hide();
+    $('#replay-btn').hide();
   }
   $toggleView();
 
@@ -57,31 +79,15 @@ $(document).ready(function() {
     $('#objective').hide();
     $('#play-btn').hide();
     $('#timer').show();
-    // Timer
-    var startTimer = 0;
-    setInterval(function() {
-      startTimer += 1;
-      $('#counter').html(startTimer);
-    }, 1000);
+    $('.bart').show();
+    timer();
+  })
+
+  $('#replay-btn').click(function () {
+    newGame();
   })
 
 
-
-
-// Create Seymour Skinner
-  // var createSkinner = function() {
-  //   var $gameArea = $('#game-area');
-  //   var skinner = $('<div class="skinner"></div>');
-  //   $($gameArea).append(skinner);
-  //   setInterval(function() {
-  //     skinner.css("top", Math.random() * $gameArea.height());
-  //     skinner.css("left", Math.random() * $gameArea.width());
-  //   }, 2000)
-  //   // return skinner;
-  // }
-  // for(var i=0; i<5; i++) {
-  //   createSkinner();
-  // }
 // Create Nelson Muntz
   // var createNelson = function() {
   //   var $gameArea = $('#game-area');
@@ -113,67 +119,32 @@ $(document).ready(function() {
   // }
 
 // Create Binky
-  var createBinky = function() {
-    var binky = $('<div class="binky"></div>');
-    $('#game-area').append(binky);
-  }
+  // var createBinky = function() {
+  //   var binky = $('<div class="binky"></div>');
+  //   $('#game-area').append(binky);
+  // }
 
   // createBinky();
 
 // Create Sideshow Bob
-  var createSideshowBob = function() {
-    var sideshowBob = $('<div class="sideshow-bob"</div>');
-    $('#game-area').append(sideshowBob);
-  }
+  // var createSideshowBob = function() {
+  //   var sideshowBob = $('<div class="sideshow-bob"</div>');
+  //   $('#game-area').append(sideshowBob);
+  // }
 
   // createSideshowBob();
-
-  // $('#inputSubmit').click(function(){
-  //   var $userInput = $('input').val();
-  //   console.log($userInput);
-
-  //   switch($userInput) {
-  //     case 'fred':
-  //       var philosopher = philosophers[0];
-  //       break;
-  //     case 'aristotle':
-  //     var philosopher = philosophers[1];
-  //       break;
-  //     case 'hegel':
-  //     var philosopher = philosophers[2];
-  //       break;
-  //     case 'simone':
-  //     var philosopher = philosophers[3];
-  //       break;
-  //     case 'martin':
-  //     var philosopher = philosophers[4];
-  //       break;
-  //     default:
-  //       console.log('Incorrect Input');
-  //   }
-
-  //   $('img').attr('src', philosopher.img);
-  //   $('.name').html(philosopher.name);
-  //   $('.school').html(philosopher.school);
-  //   $('.quote').html(philosopher.famousLine);
-
-  //   $('input').val('');
-  // })
-
 
  var createSkinner = function() {
     var $gameArea = $('#game-area');
     var skinner = $('<div class="skinner"></div>');
     $gameArea.append(skinner);
     var skinterval = setInterval(function() {
-      skinner.css("top", 0.5 * $gameArea.height()//Math.random() * $gameArea.height()
-        );
-      skinner.css("left", 0.5 * $gameArea.width()//Math.random() * $gameArea.width()
-        );
+      skinner.css("top",  Math.random() * $gameArea.height());
+      skinner.css("left", Math.random() * $gameArea.width());
     }, 2000);
-    skinner.attr('data', skinterval)
+    // skinner.attr('data', skinterval)
   }
-  for(var i=0; i<1; i++) {
+  for(var i=0; i<5; i++) {
     createSkinner();
   }
   var $bart = $('.bart');
@@ -181,21 +152,12 @@ $(document).ready(function() {
 
 function getCollision(skinner){
 
-    //console.log("bart: ");
-    //console.log($bart);
-
-    holder.bart = $bart;
-
-    // console.log($(this, "this"))
     $(skinner).each(function(index,skinner){
-      //console.log('skinner: ');
-      //console.log(skinner);
 
       var $bartH = $bart.outerHeight(true);
       var $bartW = $bart.outerWidth(true);
       var $bartX = $bart.offset().left;
       var $bartY = $bart.offset().top;
-      // console.log($bartX.left)
 
       // var $skinnerH = parseInt($(skinner).css('height').replace('px',''))
       // var $skinnerW = parseInt($(skinner).css('width').replace('px',''))
@@ -215,53 +177,55 @@ function getCollision(skinner){
 
       if(boxCollide(bartBox, skinnerBox)){
         console.log("we did it");
-      }else{
+        $('#game-area').hide();
+        $('.bart').hide();
+        $('#try-again').show();
+        $('#replay-btn').show();
+        var score = $('#counter').html();
+        console.log(score);
+        stopTimer();
 
-        log("bartBox:");
-        log(bartBox);
-        log("skinnerBox:");
-        log(skinnerBox );
+        var id = $('.id');
+        var top = $('.top-ten');
+        var spanner = $('<span class ="id"></span>')
+        var number = parseInt(id);
+
+        if (boxCollide) {
+          var userInput = prompt('Please enter your name for the leaderboard:');
+          for(var i=0; i<id.length; i++) {
+            if (score > i) {
+              $(top).html(userInput + " - ");
+              $(top).append(spanner);
+              $(spanner).html(score);
+            }
+          }
+          // for(var j=0; j<id.length; j++) {
+          //   if (score > j ) {
+          //     $(id).html(score);
+          //   }
+          // }
+
+
+          prompt.preventDefault();
+        } else {
+          alert('Sorry you didn\'t make it to the leaderboard.');
+          alert.preventDefault();
+        }
+
       }
-
-
-
-//       if ($bartX < skinnerX + skinnerW &&
-//           $bartY < skinnerY + skinnerH &&
-//           skinnerX < $bartX + $bartW &&
-//           skinnerY < $bartY + $bartW) {
-//             // $skinner.attr("class","dead");
-//               // setTimeout(function() {
-//               //   $skinner.remove();
-//               // }, 2000)
-//           console.log('boom');
-          // var thisSkin = $(skinner)[index]
-          // clearInterval($(thisSkin).attr('data'))
-
-//           // Update Leaderboard
-// //   $('#play-btn').click(function() {
-// //     var userInput = $('#inputData').val();
-// //     console.log(userInput);
-
-// // $('#leaderboard ol li').html(userInput);
-
-// //   })
-//   // $('#leaderboard ol li').html();
-
-//       }
     })
 }
-$("#game-area").mousemove(function(event) {
-    $('.bart').css({
-      'top': event.pageY,
-      'bottom': event.pageX,
-      'left': event.pageX,
-      'right': event.pageY
-    });
-    $skinner = $('.skinner')
-    getCollision($skinner);
+
+  $("#game-area").mousemove(function(event) {
+      $('.bart').css({
+        'top': event.pageY,
+        'bottom': event.pageX,
+        'left': event.pageX,
+        'right': event.pageY
+      });
+      $skinner = $('.skinner')
+      getCollision($skinner);
   });
-
-
 
 })
 })();
