@@ -46,8 +46,8 @@ $(document).ready(function() {
   };
 
   // Theme music for gameplay duration
-  // var simpsonsTheme = new Audio('audio/Simpsons_Theme.mp3');
-  // simpsonsTheme.play();
+  var simpsonsTheme = new Audio('audio/Simpsons_Theme.mp3');
+  simpsonsTheme.play();
 
 // Page loaded with landing page of just the Title and Play Button
   var $toggleView = function() {
@@ -110,7 +110,7 @@ $(document).ready(function() {
       var score = parseInt($('#counter').html());
 
       if (boxCollide(bartBox, skinnerBox)) {
-        alert('Congratulations! Your got a score of ' + score);
+        alert('Congratulations! You got a score of ' + score);
         $('#game-area').hide();
         $('#timer').hide();
         $('.bart').hide();
