@@ -11,15 +11,10 @@
   clear: both;
 }
 
-html {
-  /* cursor: url('glenn.png'), default; */
-}
 body {
-  /* cursor: url('glenn.png'), default; */
-  background: #16b2d9;;
+  background: #16b2d9;
   font-family: 'Simpsonfont', sans-serif;
 }
-
 
 #game-title {
   font-size: 50px;
@@ -38,9 +33,10 @@ body {
 #objective {
   text-align: center;
   letter-spacing: 1px;
+  line-height: 1.5;
   width: 602px;
   position: absolute;
-  top: 28%;
+  top: 25%;
   left: 50%;
   margin-left: -301px;
 }
@@ -74,18 +70,6 @@ body {
   font-size: 25px;
 }
 
-#motivation {
-  background: url('../img/reset.gif') no-repeat center center, white;
-  background-size: cover;
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  width: 492.75px;
-  height: 264px;
-  margin-top: -132px;
-  z-index: -1;
-}
-
 #timer {
   background: #ffd90f;
   border: 1px solid black;
@@ -113,78 +97,17 @@ body {
 }
 
 #game-area {
-  /* background: url('img/simpsons-background.jpg') no-repeat center center; */
   background: black;
   background-size: cover;
   padding: 20px;
-  width: 830px;
+  width: 950px;
   height: 460px;
   border: 1px solid black;
   position: absolute;
   top: 165px;
-  left: 40px;
-}
-
-#leaderboard {
-  background: #f43d15;
-  border: 1px solid #000;
-  width: 250px;
-  height: 500px;
-  border-radius: 10px;
-  text-align: center;
-  position: absolute;
-  top: 165px;
-  right: 40px;
-}
-
-#leaderboard h3 {
-  background: #fffffa;
-  font-size: 30px;
-  border-bottom: 5px solid #16b2d9;
-  border-radius: 10px 10px 0 0;
-  padding: 25px;
-  text-decoration: underline;
-}
-
-#leaderboard ol {
-  list-style: decimal inside;
-  line-height: 2;
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-#inputData {
-  width: 300px;
-  position: absolute;
-  top: 50%;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -495px;
 }
-
-#inputSubmit {
-  font-family: 'Simpsonfont', sans-serif;
-  width: 150px;
-  height: 50px;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  margin-left: -75px;
-  border-radius: 10px;
-
-}
-
-/***** SPRITES *****/
-
-/* .duck {
-  position: absolute;
-  background-image: url(images/duckhunt.png);
-  background-position: -100px -160px;
-  width: 110px;
-  height: 115px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
-} */
-
 
 .skinner {
   position: absolute;
@@ -195,80 +118,3 @@ body {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-
-/* .skinner-left {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 47px;
-  height: 56px;
-  background-position: -230px -269px;
-} */
-
-.nelson {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 31px;
-  height: 56px;
-  background-position: -114px -267px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
-}
-/* .nelson-left {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 31px;
-  height: 56px;
-  background-position: -147px -267px;
-} */
-
-.martin {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 40px;
-  height: 42px;
-  background-position: -282px -279px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
-}
-/* .martin-left {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 40px;
-  height: 42px;
-  background-position: -288px -207px;
-} */
-
-.binky {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 55px;
-  height: 63px;
-  background-position: 0px -258px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
-}
-/* .binky-left {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 55px;
-  height: 63px;
-  background-position: -58px -258px;
-} */
-
-.sideshow-bob {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 40px;
-  height: 78px;
-  background-position: -197px -171px;
-  transition: top 2s, left 2s;
-  transition-timing-function: linear;
-}
-/* .sideshow-bob-left {
-  position: absolute;
-  background-image: url(img/Sprite_Sheet.png);
-  width: 40px;
-  height: 78px;
-  background-position: -242px -171px;
-} */
-
