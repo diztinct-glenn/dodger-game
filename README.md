@@ -1,5 +1,8 @@
 # dodger-game
 My first project for General Assembly, a javascript game.
+<img src='the-simpsons.jpg'>
+
+Play here: https://gbasgaard.github.io/dodger-game/
 
 MVP: 
 Host my game on github so that it’s playable. Have a game where the objective is to dodge enemies bouncing around the screen at random for as long as you can. Once you come in contact with an enemy end the game and display the score the time. 
